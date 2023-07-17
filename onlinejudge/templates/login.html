@@ -165,7 +165,7 @@ button{
         <input type="text" placeholder="Enter Username" id="username" name="username">
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="pass">
+        <input type="password" placeholder="Password" id="password" name="password">
 
         <button type="submit">Log In</button>
         <!-- <input type="button" value=""> -->
@@ -175,5 +175,11 @@ button{
         </div> -->
         <a href="{% url 'signup' %}" >Create New account</a>
     </form>
+     <div class="error">
+        {% for message in messages %}
+        <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+    
 </body>
 </html>
